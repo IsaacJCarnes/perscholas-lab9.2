@@ -1,13 +1,16 @@
 import { type TextInputProps } from "../../types";
 
-export default function TextInput(props: TextInputProps) {
+export const TextInput: React.FC<TextInputProps> = ({
+  onTextChange,
+  placeholder = "Start typing...",
+  initialValue = "",
+}) => {
   return (
-    <input
-      type="text"
-      onChange={(e) => props.onTextChange(e.target.value)}
-      placeholder={props.placeholder}
-    >
-      {props.initialValue}
-    </input>
+    <textarea
+      onChange={(e) => onTextChange(e.target.value)}
+      placeholder={placeholder}
+      defaultValue={initialValue}
+      rows={6}
+    ></textarea>
   );
-}
+};

@@ -6,11 +6,14 @@ export const TextInput: React.FC<TextInputProps> = ({
   initialValue = "",
 }) => {
   return (
-    <textarea
-      onChange={(e) => onTextChange(e.target.value)}
-      placeholder={placeholder}
-      defaultValue={initialValue}
-      rows={6}
-    ></textarea>
+    <div className="fill-x m align-center" style={{ "--m": "5px"} as React.CSSProperties}>
+      <textarea
+        onChange={(e) => onTextChange(e.target.value)}
+        placeholder={placeholder}
+        defaultValue={initialValue}
+        className="flx fill-x p"
+        rows={6}
+      ></textarea>
+    </div>
   );
 };

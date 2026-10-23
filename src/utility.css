@@ -1,0 +1,122 @@
+/*My Personal Utility Classes*/
+* {
+  --m: initial;
+  --m-x: initial;
+  --m-y: initial;
+  --m-l: initial;
+  --m-r: initial;
+  --m-t: initial;
+  --m-b: initial;
+  --m-left: var(--m-l, var(--m-x, var(--m, 0px)));
+  --m-right: var(--m-r, var(--m-x, var(--m, 0px)));
+  --m-top: var(--m-t, var(--m-y, var(--m, 0px)));
+  --m-bottom: var(--m-b, var(--m-y, var(--m, 0px)));
+
+  --p: initial;
+  --p-x: initial;
+  --p-y: initial;
+  --p-l: initial;
+  --p-r: initial;
+  --p-t: initial;
+  --p-b: initial;
+  --p-left: var(--p-l, var(--p-x, var(--p, 0px)));
+  --p-right: var(--p-r, var(--p-x, var(--p, 0px)));
+  --p-top: var(--p-t, var(--p-y, var(--p, 0px)));
+  --p-bottom: var(--p-b, var(--p-y, var(--p, 0px)));
+}
+
+.fill,
+.fill-x {
+  width: calc(
+    100% - (var(--m-left) + var(--m-right) + var(--p-left) + var(--p-right))
+  );
+}
+
+.fill,
+.fill-y {
+  height: calc(
+    100% - (var(--m-top) + var(--m-bottom) + var(--p-top) + var(--p-bottom))
+  );
+}
+
+.flx {
+  display: flex;
+}
+
+.flx-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flx-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flx-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flx-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.align-center{
+    display: flex;
+    align-items: center;
+}
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+
+.m,
+.m-x,
+.m-l {
+  margin-left: var(--m-left);
+}
+
+.m,
+.m-x,
+.m-r {
+  margin-right: var(--m-right);
+}
+
+.m,
+.m-y,
+.m-t {
+  margin-top: var(--m-top);
+}
+
+.m,
+.m-y,
+.m-b {
+  margin-bottom: var(--m-bottom);
+}
+
+.p,
+.p-x,
+.p-l {
+  padding-left: var(--p-left);
+}
+
+.p,
+.p-x,
+.p-r {
+  padding-right: var(--p-right);
+}
+
+.p,
+.p-y,
+.p-t {
+  padding-top: var(--p-top);
+}
+
+.p,
+.p-y,
+.p-b {
+  padding-bottom: var(--p-bottom);
+}

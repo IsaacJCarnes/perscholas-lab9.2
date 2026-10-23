@@ -5,23 +5,22 @@ export const StatsDisplay: React.FC<StatsDisplayProps> = ({
   showReadingTime = true,
 }) => {
   return (
-    <div>
-      <div>
-        <div className="statLabel">
-          <p>Characters</p>
-          <span>{stats.characterCount}</span>
-        </div>
-        <div className="statLabel">
-          <p>Words</p>
-          <span>{stats.wordCount}</span>
-        </div>
-        {showReadingTime && (
-          <div className="statLabel">
-            <p>Reading Time</p>
-            <span>{stats.readingTime}</span>
-          </div>
-        )}
+    <div className="flx-around">
+      <div className="statLabel">
+        <p>Characters</p>
+        <span>{stats.characterCount}</span>
       </div>
+      <div className="statLabel">
+        <p>Words</p>
+        <span className="statDisplay">{stats.wordCount}</span>
+        <span className="wordLimits">Min: 25 | Max: 100</span>
+      </div>
+      {showReadingTime && (
+        <div className="statLabel">
+          <p>Reading Time</p>
+          <span>{stats.readingTime}</span>
+        </div>
+      )}
     </div>
   );
 };

@@ -47,7 +47,7 @@
 }
 
 #root {
-  width: 1126px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -55,9 +55,11 @@
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   box-sizing: border-box;
 }
 
 body {
+  width: 100%;
   margin: 0;
 }

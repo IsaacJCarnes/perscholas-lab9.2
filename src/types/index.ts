@@ -8,6 +8,8 @@ export interface TextStats {
   characterCount: number;
   wordCount: number;
   readingTime: number; // in minutes
+  minWords?: number;
+  maxWords?: number;
 }
  
 export interface StatsDisplayProps {

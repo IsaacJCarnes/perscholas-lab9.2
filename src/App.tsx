@@ -1,4 +1,3 @@
-import "./utility.css"
 import "./App.css";
 import { CharacterCounter } from "./components/CharacterCounter/CharacterCounter";
 

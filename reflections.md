@@ -1,0 +1,8 @@
+ - How did you handle state updates when the text changed?
+   - I had my state variable in the parent component update by using the state setter passed through props to the child component.
+ - What considerations did you make when calculating reading time?
+   - I wanted to make sure the reading time looked correct so I split the seconds and minutes calculation and made sure the seconds always has two digits.
+ - How did you ensure the UI remained responsive during rapid text input?
+   - Setting up the react state/props correctly makes sure that the app only updates on change and only necessary things will need to rerender.
+ - What challenges did you face when implementing the statistics calculations?
+   - Min/max words was not included in the StatsDisplay props interface so I had to include it.
